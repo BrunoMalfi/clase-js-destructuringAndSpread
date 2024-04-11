@@ -84,6 +84,7 @@ const combineAllArrays=(...arr)=>{
         })
         return a
 }
-console.log("Ej.Ext.3  combineAllArrays([2, 7, 3, 1],[2, 7, 4, 12],[2, 44, 22, 7, 3, 1])",combineAllArrays([2, 7, 3, 1],[2, 7, 4, 12],[2, 44, 22, 7, 3, 1]))
-const sumAndSquare=(...arr)=>arr.filter(numero => typeof(numero) == 'number').reduce((cumulative,element)=>cumulative + element**2)
-console.log('Ej.Ext.4 sumAndSquare(1, perro, 2, 4) : ', sumAndSquare(1, 'perro', 2, 4,3))
+const combineAllArrays2=(...arr)=>arr.reduce((cumulative,elemeent)=>cumulative.concat(elemeent))
+console.log("Ej.Ext.3  combineAllArrays([2, 7, 3, 1],[2, 7, 4, 12],[2, 44, 22, 7, 3, 1])",combineAllArrays2([2, 7, 3, 1],[2, 7, 4, 12],[2, 44, 22, 7, 3, 1]))
+const sumAndSquare=(...arr)=>arr.filter(numero => typeof(numero) == 'number').reduce((cumulative,element)=>cumulative + element**2,0)
+console.log('Ej.Ext.4 sumAndSquare(3, perro, 2, 4) : ', sumAndSquare(3, 'perro', 2, 4,3))
